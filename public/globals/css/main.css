@@ -1,0 +1,17 @@
+.pluscart {
+    margin-left: 5px;
+    font-size: 20px;
+    color: white;
+}
+
+.minuscart {
+    margin-left: 5px;
+    font-size: 20px;
+    color: red;
+}
+
+
+.scrollList {
+    max-height: 150px;    
+    overflow-y: scroll;
+}

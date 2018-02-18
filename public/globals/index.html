@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="mojoApp">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js "></script>
+
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#!/">TryOrFry</a>
+      </div>
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link active" href="#!/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#!/order">Order</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#!/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#!/contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#!/login">Log In</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div ng-view>
+    </div>
+  </div>
+
+
+  <script src="https://code.angularjs.org/1.6.6/angular-route.min.js"></script>
+  <script src="https://code.angularjs.org/1.6.6/angular-resource.min.js"></script>
+
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/home.js"></script>  
+  <script src="scripts/controllers/order.js"></script>
+  <script src="scripts/controllers/contact.js"></script>
+  <script src="scripts/controllers/about.js"></script>  
+  <script src="scripts/controllers/login.js"></script>  
+</body>
+
+</html>
