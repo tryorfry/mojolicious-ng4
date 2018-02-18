@@ -6,6 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
+  products = [
+    {
+      name: 'XYZ',
+      price: '$10000',
+    },
+    {
+      name: 'ABC',
+      price: '$99999',
+    }
+
+  ];
 
   constructor() { }
 

@@ -1,3 +1,14 @@
-<p>
-  users works!
-</p>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div *ngFor="let u of users" class="card" style="width:400px">
+        <div class="card-body">
+          <h4 class="card-title">{{u.name}}</h4>
+          <p class="card-text">Email: {{u.email}}</p>
+          <a href="#" class="btn btn-primary">See Profile</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

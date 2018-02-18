@@ -187,7 +187,7 @@ module.exports = ""
 /***/ "./src/app/components/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  home works!\n</p>\n"
+module.exports = "<div class=\"jumbotron\">\n  <h1>Mojolicious backend; Boostrap4 and Angular4 frontend skeleton app</h1>\n  <p>Mojolicous is the best web framework for Perl + Boostrap4 + Angular4 can do magic. Let's learn how.</p>\n</div>\n"
 
 /***/ }),
 
@@ -237,7 +237,7 @@ module.exports = ""
 /***/ "./src/app/components/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  login works!\n</p>\n"
+module.exports = "<br>\n<div class=\"container\">\n  <form action=\"\">\n    <div class=\"form-group\">\n      <label for=\"email\">Email address:</label>\n      <input type=\"email\" class=\"form-control\" id=\"email\">\n    </div>\n    <div class=\"form-group\">\n      <label for=\"pwd\">Password:</label>\n      <input type=\"password\" class=\"form-control\" id=\"pwd\">\n    </div>\n    <button type=\"submit\" class=\"btn btn-primary\">Login</button>\n  </form>\n</div>\n"
 
 /***/ }),
 
@@ -287,7 +287,7 @@ module.exports = ""
 /***/ "./src/app/components/nav/nav.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-toggleable-md navbar-light bg-faded\">\n    <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <a class=\"navbar-brand\" href=\"#\">TryOrFry</a>\n    <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n      <ul class=\"navbar-nav\">\n        <li class=\"nav-item active\">\n          <a class=\"nav-link\" href=\"#\">Login <span class=\"sr-only\">(current)</span></a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"#\">Users</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"#\">Products</a>\n        </li>\n\n      </ul>\n    </div>\n  </nav>\n"
+module.exports = "<nav class=\"navbar navbar-toggleable-md navbar-light bg-faded\">\n    <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <a routerLink=\"/\" class=\"navbar-brand nav-link\">TryOrFry</a>\n    <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n      <ul class=\"navbar-nav\">\n        <li class=\"nav-item active\">\n          <a routerLink=\"/login\" class=\"nav-link\">Login <span class=\"sr-only\">(current)</span></a>\n        </li>\n        <li class=\"nav-item\">\n          <a routerLink=\"/users\" class=\"nav-link\">Users</a>\n        </li>\n        <li class=\"nav-item\">\n          <a routerLink=\"/products\" class=\"nav-link\" href=\"#\">Products</a>\n        </li>\n\n      </ul>\n    </div>\n  </nav>\n"
 
 /***/ }),
 
@@ -337,7 +337,7 @@ module.exports = ""
 /***/ "./src/app/components/products/products.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  products works!\n</p>\n"
+module.exports = "<br>\n<div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-6\">\n        <div *ngFor=\"let p of products\" class=\"card\" style=\"width:400px\">\n          <div class=\"card-body\">\n            <h4 class=\"card-title\">{{p.name}}</h4>\n            <p class=\"card-text\">Price: {{p.price}}</p>\n            <a href=\"#\" class=\"btn btn-primary\">See Detail</a>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>"
 
 /***/ }),
 
@@ -359,6 +359,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var ProductsComponent = /** @class */ (function () {
     function ProductsComponent() {
+        this.products = [
+            {
+                name: 'XYZ',
+                price: '$10000',
+            },
+            {
+                name: 'ABC',
+                price: '$99999',
+            }
+        ];
     }
     ProductsComponent.prototype.ngOnInit = function () {
     };
@@ -387,7 +397,7 @@ module.exports = ""
 /***/ "./src/app/components/users/users.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  users works!\n</p>\n"
+module.exports = "<br>\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-md-6\">\n      <div *ngFor=\"let u of users\" class=\"card\" style=\"width:400px\">\n        <div class=\"card-body\">\n          <h4 class=\"card-title\">{{u.name}}</h4>\n          <p class=\"card-text\">Email: {{u.email}}</p>\n          <a href=\"#\" class=\"btn btn-primary\">See Profile</a>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -409,6 +419,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var UsersComponent = /** @class */ (function () {
     function UsersComponent() {
+        this.users = [
+            {
+                name: 'Sachin',
+                email: 'sachindangol@gmail.com'
+            },
+            {
+                name: 'rt',
+                email: 'rt@gmail.com'
+            }
+        ];
     }
     UsersComponent.prototype.ngOnInit = function () {
     };
