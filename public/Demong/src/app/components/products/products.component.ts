@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ApiclientService} from '../../services/apiclient.service';
 
 @Component({
   selector: 'app-products',
@@ -6,21 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  products = [
-    {
-      name: 'XYZ',
-      price: '$10000',
-    },
-    {
-      name: 'ABC',
-      price: '$99999',
-    }
-
-  ];
-
-  constructor() { }
+  products;
+  constructor(private apiclient: ApiclientService) { }
 
   ngOnInit() {
+    this.products = this.apiclient.getData('http://localhost:8080/Demo/hello');
   }
-
 }

@@ -1,14 +1,47 @@
 <br>
-<div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <div *ngFor="let p of products" class="card" style="width:400px">
-          <div class="card-body">
-            <h4 class="card-title">{{p.name}}</h4>
-            <p class="card-text">Price: {{p.price}}</p>
-            <a href="#" class="btn btn-primary">See Detail</a>
-          </div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8">
+      <div *ngFor="let p of products" class="card" style="width:350px; display: inline-block">
+        <img class="card-img-top" src="{{p.imgUrl}}" style="height: 250px" alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title">{{p.name}}</h4>
+          <p class="card-text">{{p.text}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Price: {{p.price}}</li>
+        </ul>
+        <div class="card-block">
+          <a href="#" class="btn btn-primary">Add to Cart</a>
         </div>
       </div>
     </div>
+    <div class="col-md-4">
+      <div class="card" style="width:350px">
+        <img class="card-img-top" src="assets/images/shopping-cart.png" style="height: 200px" alt="cart item">
+        <div class="card-block">
+          <h4 class="card-title">Items in your Cart</h4>
+          <p class="card-text">Happy Shopping!</p>
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Item Name</th>
+              <th>Unit Price</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
+</div>

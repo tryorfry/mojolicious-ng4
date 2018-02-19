@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {HttpModule} from '@angular/http';
 
 
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ import { LoginComponent } from './components/login/login.component';
 import { UsersComponent } from './components/users/users.component';
 import { ProductsComponent } from './components/products/products.component';
 import { AppRoutingModule } from './/app-routing.module';
+import {ApiclientService} from './services/apiclient.service';
 
 
 @NgModule({
@@ -22,9 +24,10 @@ import { AppRoutingModule } from './/app-routing.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [ApiclientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
