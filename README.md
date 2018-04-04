@@ -1,5 +1,5 @@
 # mojolicious-ng4
-a Mojolicious backend, bootstrp4 and Angular4 frontend - app skeleton
+a Mojolicious backend, bootstrap4 and Angular4 frontend - app skeleton
 :
 
 Home Page:
